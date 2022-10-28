@@ -58,3 +58,7 @@ Parametrização e repostas da confgiuração do Wdio
 Executar testes
 
     npm run wdio
+
+Executar teste mobile com capabilities 
+
+    npm test run ./test-config.js

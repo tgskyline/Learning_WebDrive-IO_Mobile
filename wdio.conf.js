@@ -4,7 +4,11 @@ exports.config = {
     // Runner Configuration
     // ====================
     //
+    // ruuner: 'local',
     port: 4723,
+    host: 'localhost',
+    path: '/wd/hub',
+
     //
     // ==================
     // Specify Test Files
@@ -55,22 +59,27 @@ exports.config = {
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-        maxInstances: 5,
+        // maxInstances: 5,
         //
-        browserName: 'chrome',
-        acceptInsecureCerts: true,
+        // browserName: 'chrome',
+        // acceptInsecureCerts: true,
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
         // excludeDriverLogs: ['bugreport', 'server'],
         
-        automationName: 'UiAutomator2',
-        platformName: 'Android',
-        deviceName: 'Emulator',
-        app: 'C:\\qa.automation.robot\\QA.Automation.Robot\\Config\\Apk\\ToroMobile_HML_10-8-0.apk',
-        udid: 'emulator-5554'
-            
+        // automationName: 'UiAutomator2',
+        // platformName: 'Android',
+        // deviceName: 'Emulator',
+        // app: 'C:\\qa.automation.robot\\QA.Automation.Robot\\Config\\Apk\\ToroMobile_HML_10-8-0.apk',
+        // udid: 'emulator-5554'
 
+        platformName: 'Android',
+        automationName: 'UiAutomator2',
+        udid: 'emulator-5554',
+        appPackage: 'com.wdiodemoapp',
+        appActivity: '.MainActivity'
+            
     }],
     //
     // ===================
