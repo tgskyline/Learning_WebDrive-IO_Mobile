@@ -58,11 +58,19 @@ exports.config = {
         maxInstances: 5,
         //
         browserName: 'chrome',
-        acceptInsecureCerts: true
+        acceptInsecureCerts: true,
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
         // excludeDriverLogs: ['bugreport', 'server'],
+        
+        automationName: 'UiAutomator2',
+        platformName: 'Android',
+        deviceName: 'Emulator',
+        app: 'C:\\qa.automation.robot\\QA.Automation.Robot\\Config\\Apk\\ToroMobile_HML_10-8-0.apk',
+        udid: 'emulator-5554'
+            
+
     }],
     //
     // ===================
