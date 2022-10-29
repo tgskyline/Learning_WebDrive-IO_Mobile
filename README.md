@@ -2,26 +2,42 @@
 
 ## Framework de automação de teste WEB e MOBILE
 
+Crie um novo projeto NodeJs
+
+    npm init -y
+
 Instalação do Appium
 
     npm install -g appium
+
+ou para instalar a versão Beta
+
+    npm install -g appium@next
+
+Instale o Appium doctor e o execute para verificar se esta tudo ok
+
+    npm install -g appium-doctor
+
+Execute o Appium Doctor com o comando
+
+    appium-doctor --android
+    appium-doctor --ios
+
+Instale o Wdio CLI
+
+    npm i @wdio/cli
 
 Comando para listar AVDS
 
     emulator -list-avds
 
-Iniciar o AVD por linha de comando
-
-
-    emulator @avd_name [ {-option [value]} … ]
-
-Exemplo
-
-    emulator @Pixel_4_API_33
-
 Instalação do WebdriverIO
 
     npm init wdio .
+
+Também pode ser configurado o projeto a parte com o comando 
+
+    npx wdio config
 
 Parametrização e repostas da confgiuração do Wdio
 
@@ -55,6 +71,14 @@ Parametrização e repostas da confgiuração do Wdio
     - @wdio/appium-service     
     - chromedriver
 
+Iniciar o AVD por linha de comando
+
+    emulator @avd_name [ {-option [value]} … ]
+
+Exemplo
+
+    emulator @Pixel_4_API_33
+
 Executar testes
 
     npm run wdio
@@ -62,3 +86,11 @@ Executar testes
 Executar teste mobile com capabilities 
 
     npm test run ./test-config.js
+
+Atalho rápido para execução do teste
+
+    npx wdio
+
+NOTA: Para iniciar o Servidor Appium caso não utilize o Wdio/CLI utilize o comando abaixo
+
+    appium --base-path /wd/hub --port 4723

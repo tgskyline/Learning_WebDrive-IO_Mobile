@@ -1,6 +1,9 @@
+// const shell = require('shelljs');
+
 describe('Diga Hello World',function () {
 
     before(function (){
+        // shell.exec('emulator @Pixel_4_API_33'); 
         console.log("ANTES DE TODOS TESTES")
     })
 
@@ -23,5 +26,18 @@ describe('Diga Hello World',function () {
 
     it('Cenário 2: A Definir', function (){
         console.log("Segundo teste")
+    })
+
+    it('Cenário 3: Clique em Login', function(){
+        
+        // Browser.pause(3000)
+        
+        //Elementos mapeados
+         const BTN_Entrar = '~Login'
+        
+        //  $(BTN_Entrar).waitForClickable()
+ 
+         //Clica no Botão ENTRAR
+         $(BTN_Entrar).click()
     })
 })

@@ -4,11 +4,10 @@ exports.config = {
     // Runner Configuration
     // ====================
     //
-    // ruuner: 'local',
-    port: 4723,
+    // runner: 'local',
     host: 'localhost',
     path: '/wd/hub',
-
+    port: 4723,
     //
     // ==================
     // Specify Test Files
@@ -26,7 +25,9 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        './test/specs/**/*.js'
+        // 'test\\specs\\LoginTrainingApp.js'
+        // 'test\\specs\\LoginToro.js'
+        'test\\specs\\LoginDemoApp.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -55,31 +56,29 @@ exports.config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-    
-        // maxInstances can get overwritten per capability. So if you have an in-house Selenium
-        // grid with only 5 firefox instances available you can make sure that not more than
-        // 5 instances get started at a time.
-        // maxInstances: 5,
-        //
-        // browserName: 'chrome',
-        // acceptInsecureCerts: true,
-        // If outputDir is provided WebdriverIO can capture driver session logs
-        // it is possible to configure which logTypes to include/exclude.
-        // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
-        // excludeDriverLogs: ['bugreport', 'server'],
-        
-        // automationName: 'UiAutomator2',
-        // platformName: 'Android',
-        // deviceName: 'Emulator',
-        // app: 'C:\\qa.automation.robot\\QA.Automation.Robot\\Config\\Apk\\ToroMobile_HML_10-8-0.apk',
-        // udid: 'emulator-5554'
+        // Webdriver IO
+        "appium:platformName": "Android",
+        "appium:deviceName": "Pixel 4 API 33", 
+        "appium:automationName": "UiAutomator2",
+        "appium:udid": "emulator-5554",
+        // "appium:appPackage": "com.wdiodemoapp",
+        "appium:app": 'C:\\Users\\tiago.santos\\OneDrive\\Documentos\\Automação de Testes\\WebDriverIO\\Mobile-WdioWithAppium\\app\\Android-NativeDemoApp.apk',
+        "appium:appActivity": ".MainActivity"
 
-        platformName: 'Android',
-        automationName: 'UiAutomator2',
-        udid: 'emulator-5554',
-        appPackage: 'com.wdiodemoapp',
-        appActivity: '.MainActivity'
-            
+        // Toro Investimentos
+        // "appium:platformName": "Android",
+        // "appium:deviceName": "Pixel 4 API 33", 
+        // "appium:automationName": "UiAutomator2",
+        // "appium:udid": "emulator-5554",
+        // "appim:app": "C:\\qa.automation.robot\\QA.Automation.Robot\\Config\\Apk\\ToroMobile_HML_10-8-0.apk",
+        
+        // TWP
+        // "appium:platformName": "Android",
+        // "appium:deviceName": "Pixel 4 API 33", 
+        // "appium:automationName": "UiAutomator2",
+        // "appium:udid": "emulator-5554",
+        // "appim:app": "C:\\Users\\tiago.santos\\OneDrive\\Documentos\\Automação de Testes\\RobotFramework\\Mobile\\Learning_AppiumWithRobot\\App\\twp.apk",
+        
     }],
     //
     // ===================
@@ -128,7 +127,7 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['chromedriver','appium'],
+    services: ['appium'],
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
