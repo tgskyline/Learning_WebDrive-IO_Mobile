@@ -1,13 +1,14 @@
+const path = require('path');
 exports.config = {
     //
     // ====================
     // Runner Configuration
     // ====================
     //
-    // runner: 'local',
-    host: 'localhost',
-    path: '/wd/hub',
+    runner: 'local',
     port: 4723,
+    // host: 'localhost',
+    // path: '/wd/hub',
     //
     // ==================
     // Specify Test Files
@@ -62,15 +63,16 @@ exports.config = {
         "appium:automationName": "UiAutomator2",
         "appium:udid": "emulator-5554",
         // "appium:appPackage": "com.wdiodemoapp",
-        "appium:app": 'C:\\Users\\tiago.santos\\OneDrive\\Documentos\\Automação de Testes\\WebDriverIO\\Mobile-WdioWithAppium\\app\\Android-NativeDemoApp.apk',
+        "appium:app": path.join(process.cwd(), "./app/Android-NativeDemoApp.apk"),
         "appium:appActivity": ".MainActivity"
 
-        // Toro Investimentos
+        // // Toro Investimentos
         // "appium:platformName": "Android",
         // "appium:deviceName": "Pixel 4 API 33", 
         // "appium:automationName": "UiAutomator2",
         // "appium:udid": "emulator-5554",
         // "appim:app": "C:\\qa.automation.robot\\QA.Automation.Robot\\Config\\Apk\\ToroMobile_HML_10-8-0.apk",
+        // "appium:appActivity": ".MainActivity"
         
         // TWP
         // "appium:platformName": "Android",

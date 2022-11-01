@@ -27,10 +27,6 @@ Instale o Wdio CLI
 
     npm i @wdio/cli
 
-Comando para listar AVDS
-
-    emulator -list-avds
-
 Instalação do WebdriverIO
 
     npm init wdio .
@@ -58,8 +54,7 @@ Parametrização e repostas da confgiuração do Wdio
     ./test/pageobjects/**/*.js
     ? Which reporter do you want to use? spec
     ? Do you want to add a plugin to your test setup?
-    ? Do you want to add a service to your test setup? 
-    chromedriver, appium
+    ? Do you want to add a service to your test setup? appium
     ? What is the base url? http://localhost    
     ? Do you want me to run `npm install` Yes
 
@@ -74,6 +69,10 @@ Parametrização e repostas da confgiuração do Wdio
 Iniciar o AVD por linha de comando
 
     emulator @avd_name [ {-option [value]} … ]
+
+Comando para listar AVDS
+
+    emulator -list-avds
 
 Exemplo
 
@@ -93,4 +92,5 @@ Atalho rápido para execução do teste
 
 NOTA: Para iniciar o Servidor Appium caso não utilize o Wdio/CLI utilize o comando abaixo
 
-    appium --base-path /wd/hub --port 4723
+    appium -a localhost --base-path /wd/hub --port 4723
+    appium -a 127.0.0.1 --base-path /wd/hub --port 4723
