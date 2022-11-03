@@ -26,7 +26,7 @@ describe("Faça o login",function(){
         console.log("Segundo teste")
     })
     
-    it("Cenário 3: Deve aguardar e clicar em 'Login'",function(){
+    it("Cenário 3: Deve aguardar e clicar em 'Login'", function(){
         
         // Elementos mapeados
         const ICN_LOGIN = '~Login'
@@ -36,7 +36,7 @@ describe("Faça o login",function(){
         browser.pause(3000)
     })
 
-    it("Cenário 4: Deve realizar o login com SUCESSO!'",function(){
+    it("Cenário 4: Deve realizar o login com SUCESSO!'", function() {
         
         // Elementos mapeados
         const ICN_LOGIN = '~Login'

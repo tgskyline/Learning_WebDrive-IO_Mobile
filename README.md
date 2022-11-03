@@ -62,9 +62,7 @@ Parametrização e repostas da confgiuração do Wdio
     - @wdio/local-runner       
     - @wdio/mocha-framework    
     - @wdio/spec-reporter      
-    - wdio-chromedriver-service
     - @wdio/appium-service     
-    - chromedriver
 
 Iniciar o AVD por linha de comando
 
@@ -94,3 +92,34 @@ NOTA: Para iniciar o Servidor Appium caso não utilize o Wdio/CLI utilize o coma
 
     appium -a localhost --base-path /wd/hub --port 4723
     appium -a 127.0.0.1 --base-path /wd/hub --port 4723
+
+Verifique se driver UIAUTOMATOR2 esta instalado com o comando abaixo
+
+    appium driver list
+
+NOTA: Caso não consiga ter a lista dos driver com o comando acima recomendo desinstalar a versão do Appium com o comando abaixo e instar a versão Beta com o comando <npm install -g appium@next> que esta listado logo acima nas anotações.
+
+Desinstalação do Appium Global e Dependência do projeto
+
+    npm uninstall -g appium
+    npm unistanll appium
+
+Com o appium desinstalado instale a versão beta e ela sido instalada sem erros executo o comando abaixo caso seu retorno tenha sido similar ao do exemplo abaixo.
+
+    $ appium driver list
+    ✔ Listing available drivers
+    - uiautomator2 [not installed]
+    - xcuitest [not installed]
+    - youiengine [not installed]
+    - windows [not installed]
+    - mac [not installed]
+    - mac2 [not installed]
+    - espresso [not installed]
+    - tizen [not installed]
+    - flutter [not installed]
+    - safari [not installed]
+    - gecko [not installed]
+
+Instale o Driver UIAUTOMATOR2 com o comando abaixo
+
+    appium driver install uiautomator2
