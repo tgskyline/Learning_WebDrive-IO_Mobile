@@ -27,8 +27,8 @@ exports.config = {
     //
     specs: [
         // 'test\\specs\\LoginTrainingApp.js'
-        'test\\specs\\LoginToro.js'
-        // 'test\\specs\\LoginDemoApp.js'
+        // 'test\\specs\\LoginToro.js'
+        'test\\specs\\LoginDemoApp.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -58,21 +58,21 @@ exports.config = {
     //
     capabilities: [{
         // Webdriver IO
-        // "appium:platformName": "Android",
-        // "appium:platformVersion": "13",
-        // "appium:deviceName": "Pixel 4 API 33", 
-        // "appium:automationName": "UiAutomator2",
-        // "appium:udid": "emulator-5554",
-        // // "appium:appPackage": "com.wdiodemoapp",
-        // "appium:app": path.join(process.cwd(), "./app/Android-NativeDemoApp.apk"),
-        // "appium:appActivity": ".MainActivity"
-
-        // // Toro Investimentos
         "appium:platformName": "Android",
+        "appium:platformVersion": "13",
         "appium:deviceName": "Pixel 4 API 33", 
         "appium:automationName": "UiAutomator2",
         "appium:udid": "emulator-5554",
-        "appim:app": "C:\\qa.automation.robot\\QA.Automation.Robot\\Config\\Apk\\ToroMobile_HML_10-8-0.apk"
+        // "appium:appPackage": "com.wdiodemoapp",
+        "appium:app": path.join(process.cwd(), "./app/Android-NativeDemoApp.apk"),
+        "appium:appActivity": ".MainActivity"
+
+        // // Toro Investimentos
+        // "appium:platformName": "Android",
+        // "appium:deviceName": "Pixel 4 API 33", 
+        // "appium:automationName": "UiAutomator2",
+        // "appium:udid": "emulator-5554",
+        // "appim:app": "C:\\qa.automation.robot\\QA.Automation.Robot\\Config\\Apk\\ToroMobile_HML_10-8-0.apk",
         // "appium:appActivity": ".MainActivity"
         
         // TWP
