@@ -26,23 +26,23 @@ describe("Faça o login",function(){
         console.log("Segundo teste")
     })
     
-    it("Cenário 3: Deve aguardar e clicar em 'Login'", function(){
+    // it("Cenário 3: Deve aguardar e clicar em 'Login'", function(){
         
-        // Elementos mapeados
-        const ICN_LOGIN = '~Login'
+    //     // Elementos mapeados
+    //     const ICN_LOGIN = '~Login'
 
-        // Clica no Icone Login
-        $(ICN_LOGIN).click()
-        browser.pause(3000)
-    })
+    //     // Clica no Icone Login
+    //     $(ICN_LOGIN).click()
+    //     browser.pause(3000)
+    // })
 
     it("Cenário 4: Deve realizar o login com SUCESSO!'", function() {
         
         // Elementos mapeados
-        const ICN_LOGIN = '~Login'
-        const FIELD_EMAIL = '~input-email'
-        const FIELD_SENHA = '~input-password'
-        const BTN_LOGIN = '~button-LOGIN'
+        const ICN_LOGIN = "~Login"
+        const FIELD_EMAIL = "~input-email"
+        const FIELD_SENHA = "~input-password"
+        const BTN_LOGIN = "~button-LOGIN"
 
         // Clica no Icone Login
         $(ICN_LOGIN).waitForClickable({ timeout: 5000 });

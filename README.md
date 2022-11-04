@@ -75,12 +75,13 @@ Comando para listar AVDS
 Exemplo
 
     emulator @Pixel_4_API_33
+    emulator -avd Pixel_4_API_33
 
 Executar testes
 
     npm run wdio
 
-Executar teste mobile com capabilities 
+Executar teste apontando o arquivo .config.js especifico
 
     npm test run ./test-config.js
 
